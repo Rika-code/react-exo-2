@@ -25,10 +25,14 @@ function Products () {
      <main>
        {productslist.map((product) => { 
         return (
+          <>
+          {product.isPublished && (
        <article>
        <h2>{product.title}</h2>
        <p>{product.price}</p>
        </article>
+       )}
+       </>
            );
         })}
       </main>
